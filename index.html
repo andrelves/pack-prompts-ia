@@ -125,13 +125,21 @@
       </div>
     </div>
 
-    <form>
-      <h2>📬 Receba o pack + entre no grupo de WhatsApp:</h2>
-      <label for="name">Nome</label><input type="text" id="name" name="name" required/>
-      <label for="email">E-mail</label><input type="email" id="email" name="email" required/>
-      <label for="whatsapp">WhatsApp (apenas números)</label><input type="tel" id="whatsapp" name="whatsapp" placeholder="5511999999999" required/>
-      <button type="submit" class="submit-btn">📥 Enviar Pack + Entrar no WhatsApp</button>
-    </form>
+    <form action="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzZTA0MzI1MjZjNTUzZDUxMzUi_pc" method="POST">
+  <h2>📬 Insira seus dados e receba o pack + entre no grupo exclusivo do WhatsApp:</h2>
+  
+  <label for="name">Nome</label>
+  <input type="text" id="name" name="name" required/>
+
+  <label for="email">E-mail</label>
+  <input type="email" id="email" name="email" required/>
+
+  <label for="whatsapp">WhatsApp (apenas números)</label>
+  <input type="tel" id="whatsapp" name="whatsapp" placeholder="5511999999999" required/>
+
+  <button type="submit" class="submit-btn">📥 Enviar Pack + Entrar no WhatsApp</button>
+</form>
+
 
     <footer>Política de Privacidade | Termos de Uso</footer>
   </div>
