@@ -16,6 +16,13 @@
       margin: 0;
       scroll-behavior: smooth;
     }
+
+    @media (max-width: 768px) {
+      body {
+        background-attachment: scroll;
+      }
+    }
+
     .container {
       max-width: 1000px;
       margin: auto;
@@ -38,7 +45,6 @@
       color: #ccc;
       margin-bottom: 2rem;
     }
-    .hero-img { display: none; }
     .benefits-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
@@ -113,25 +119,6 @@
       margin-top: 1.5rem;
       cursor: pointer;
     }
-    .cta-btn {
-      background: #00d1ff;
-      color: #0e0f17;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-    .tail-cta {
-      text-align: center;
-      margin: 2rem 0;
-    }
-    .tail-cta p {
-      font-size: 1.2rem;
-      color: #ccc;
-      margin-bottom: 1rem;
-    }
     footer {
       text-align: center;
       margin: 3rem 0;
@@ -145,7 +132,7 @@
       <h1>Descubra os Prompts de IA Que Economizam Horas do Seu Dia</h1>
       <h2>O primeiro passo para dominar IA no seu dia — sem complicação</h2>
       <p style="color:#ffcc00; margin-top:0.5rem;">Pack gratuito por tempo limitado!</p>
-      <button class="cta-btn" onclick="document.getElementById('formulario-pack').scrollIntoView({ behavior: 'smooth' });">🔽 Quero o Pack Gratuito</button>
+      <button class="submit-btn" onclick="document.getElementById('formulario-pack').scrollIntoView({ behavior: 'smooth' });">⚡ Receber o meu Pack Agora</button>
     </div>
   </div>
 
@@ -193,7 +180,6 @@
       <button type="submit" class="submit-btn">⚡ Receber o meu Pack Agora</button>
     </form>
 
-    
     <footer>
       <a href="privacidade.html" style="color:#ccc; text-decoration:none;">Política de Privacidade</a> | Termos de Uso
     </footer>
@@ -204,7 +190,7 @@
       const name = document.getElementById("name").value.trim();
       const email = document.getElementById("email").value.trim();
       const whatsapp = document.getElementById("whatsapp").value.trim();
-      if (!name || !email || !whatsapp || whatsapp === "+55") {
+      if (!name || !email || whatsapp.length <= 3) {
         alert("Por favor, preencha todos os campos corretamente.");
         return false;
       }
@@ -213,3 +199,4 @@
   </script>
 </body>
 </html>
+
