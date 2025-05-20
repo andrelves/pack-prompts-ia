@@ -13,6 +13,7 @@
       color: #eee;
       font-family: "Poppins", sans-serif;
       margin: 0;
+      scroll-behavior: smooth;
     }
     .container {
       max-width: 1000px;
@@ -101,7 +102,7 @@
     <div class="container">
       <h1>Descubra os Prompts de IA Que Economizam Horas do Seu Dia</h1>
       <h2>Receba gratuitamente um pack com os prompts mais eficazes para criar imagens incríveis, automatizar tarefas e turbinar sua produtividade.</h2>
-      <button class="cta-btn">🔽 Quero o Pack Gratuito</button>
+      <button class="cta-btn" onclick="document.getElementById('formulario-pack').scrollIntoView({ behavior: 'smooth' });">🔽 Quero o Pack Gratuito</button>
     </div>
   </div>
 
@@ -125,25 +126,35 @@
       </div>
     </div>
 
-    <form action="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzZTA0MzI1MjZjNTUzZDUxMzUi_pc" method="POST" onsubmit="setTimeout(() => window.location.href='obrigado.html', 500);">
+    <form id="formulario-pack" action="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzZTA0MzI1MjZjNTUzZDUxMzUi_pc" method="POST" onsubmit="if (!validateForm()) return false; setTimeout(() => window.location.href='obrigado.html', 500);">
+      <h2>📬 Insira seus dados e receba o pack + entre no grupo exclusivo do WhatsApp:</h2>
 
-  <h2>📬 Insira seus dados e receba o pack + entre no grupo exclusivo do WhatsApp:</h2>
-  
-  <label for="name">Nome</label>
-  <input type="text" id="name" name="name" required/>
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required/>
 
-  <label for="email">E-mail</label>
-  <input type="email" id="email" name="email" required/>
+      <label for="email">Seu melhor e-mail</label>
+      <input type="email" id="email" name="email" placeholder="exemplo@email.com" required/>
 
-  <label for="whatsapp">WhatsApp (apenas números)</label>
-  <input type="tel" id="whatsapp" name="whatsapp" placeholder="5511999999999" required/>
+      <label for="whatsapp">WhatsApp</label>
+      <input type="tel" id="whatsapp" name="whatsapp" placeholder="(DDD) + número" required value="+55"/>
 
-  <button type="submit" class="submit-btn">📥 Enviar Pack + Entrar no WhatsApp</button>
-</form>
-
+      <button type="submit" class="submit-btn">⚡ Receber o meu Pack Agora</button>
+    </form>
 
     <footer>Política de Privacidade | Termos de Uso</footer>
   </div>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const whatsapp = document.getElementById("whatsapp").value.trim();
+      if (!name || !email || !whatsapp || whatsapp === "+55") {
+        alert("Por favor, preencha todos os campos corretamente.");
+        return false;
+      }
+      return true;
+    }
+  </script>
 </body>
 </html>
-
