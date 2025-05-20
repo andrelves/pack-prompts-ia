@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pack de Prompts IA – Turbine Seu Dia</title>
   <style>
     body {
@@ -21,31 +21,34 @@
       text-align: center;
     }
     .hero-section {
-      background: linear-gradient(to bottom, rgba(14, 15, 23, 0.8), rgba(14, 15, 23, 0.95)), url('https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/hero-woman.jpg');
+      background: linear-gradient(to bottom, rgba(14, 15, 23, 0.7), rgba(14, 15, 23, 0.9)), url('https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/hero-woman.jpg');
       background-size: cover;
-      background-position: center;
+      background-position: right;
       padding: 6rem 2rem 4rem;
       border-radius: 12px;
     }
     h1 {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       color: #00d1ff;
     }
-    h2, h3 {
-      font-size: 1.3rem;
+    h2 {
+      font-size: 1.2rem;
       color: #ccc;
       margin-bottom: 1.5rem;
     }
-    ul {
-      text-align: left;
-      margin-top: 1rem;
-      line-height: 1.7;
-      font-size: 1.05rem;
+    .highlight {
+      color: yellow;
+      font-weight: bold;
+      margin-top: 0.5rem;
     }
-    .hero-img { display: none; }
+    .highlight span {
+      color: red;
+      text-decoration: line-through;
+      margin-right: 5px;
+    }
     .benefits-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1.5rem;
       margin: 2rem 0;
     }
@@ -57,10 +60,31 @@
     }
     .benefit img {
       width: 100%;
-      height: 250px;
-      object-fit: cover;
       border-radius: 8px;
-      margin-bottom: 0.5rem;
+      height: 220px;
+      object-fit: cover;
+    }
+    .pack-details {
+      text-align: left;
+      margin-top: 3rem;
+      background: #1a1c29;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+    .pack-details h3 {
+      color: #00d1ff;
+      margin-bottom: 1rem;
+    }
+    .pack-details li {
+      list-style: none;
+      margin: 0.5rem 0;
+      color: #eee;
+    }
+    .pack-details li::before {
+      content: "✅";
+      margin-right: 0.5rem;
+      color: #00ff9d;
     }
     form {
       background: #1a1c29;
@@ -70,11 +94,11 @@
       text-align: left;
       margin-top: 2rem;
     }
-    label { color: #aaa; margin-top:1rem; display:block; }
+    label { color: #aaa; margin-top: 1rem; display: block; }
     input {
-      width:100%;
-      padding: .8rem;
-      margin-top: .3rem;
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.3rem;
       border-radius: 6px;
       border: none;
       background: #333;
@@ -91,66 +115,72 @@
       margin-top: 1.5rem;
       cursor: pointer;
     }
-    .highlight {
-      color: #FFD700;
-      font-weight: bold;
+    .cta-highlight {
+      background: #0e0f17;
       margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #bbb;
     }
     footer {
       text-align: center;
-      margin: 3rem 0;
-      color: #555;
-      font-size: 0.9rem;
+      margin: 3rem 0 1rem;
+      color: #999;
+      font-size: 0.85rem;
+    }
+    footer a {
+      color: #00d1ff;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
+
   <div class="hero-section">
     <div class="container">
-      <h1>Economize +3 Horas Por Dia com Prompts de IA Testados</h1>
-      <h2>25 comandos prontos para automatizar tarefas e elevar sua criatividade — mesmo sem experiência em IA</h2>
-      <p class="highlight">Pack gratuito por tempo limitado (avaliado em R$ 97)</p>
-      <button class="submit-btn" onclick="document.getElementById('formulario').scrollIntoView({ behavior: 'smooth' });">⚡ Receber o meu Pack Agora</button>
+      <h1>Pack com +30 Prompts para IA, Produtividade e Criatividade</h1>
+      <h2>Pack com mais de 30 prompts prontos para automatizar tarefas e elevar sua criatividade — mesmo sem experiência em IA</h2>
+      <div class="highlight"><span>R$97,00</span> GRATUITO POR TEMPO LIMITADO</div>
     </div>
   </div>
 
   <div class="container">
-    <h3>✅ O que você vai receber GRATUITAMENTE:</h3>
-    <ul>
-      <li>✅ 25 Prompts Visuais para IA (adaptado para: Midjourney, Leonardo IA, Ideogram, Runway, VisualElectric, Hailuo)</li>
-      <li>✅ 10 Prompts para Produtividade e Automação com ChatGPT</li>
-      <li>✅ Mini Guia: Fundamentos da Engenharia de Prompt 
-        <ul>
-          <li>→ O que é prompt engineering</li>
-          <li>→ Estrutura ideal para prompts</li>
-          <li>→ Exemplo funcional com explicação</li>
-        </ul>
-      </li>
-      <li>🎁 Bônus Exclusivo: Prompt premium estruturado com metodologia de aperfeiçoamento e Prompt Engineering avançado</li>
-      <li>🎯 Acesso ao Grupo VIP no WhatsApp para dúvidas em tempo real</li>
-    </ul>
-
     <div class="benefits-grid">
       <div class="benefit">
-        <img src="https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/criacao-imagem.jpg" alt="Criação com IA"/>
+        <img src="https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/criacao-imagem.jpg" alt="Criação com IA" />
         <p>Prompts criativos para gerar imagens incríveis com IA.</p>
       </div>
       <div class="benefit">
-        <img src="https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/organizacao-tarefas.jpg" alt="Organização de Tarefas"/>
+        <img src="https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/organizacao-tarefas.jpg" alt="Organização de Tarefas" />
         <p>Automatize sua rotina com prompts de produtividade.</p>
       </div>
       <div class="benefit">
-        <img src="https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/fotografia-antiga.jpg" alt="Estilo Fotográfico"/>
+        <img src="https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/fotografia-antiga.jpg" alt="Estilo Fotográfico" />
         <p>Crie imagens em estilos únicos com IA.</p>
       </div>
       <div class="benefit">
-        <img src="https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/robo-prompt.jpg" alt="Robô criando Prompt"/>
+        <img src="https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/robo-prompt.jpg" alt="Robô criando Prompt" />
         <p>Explore o poder dos prompts avançados com IA personalizada.</p>
       </div>
     </div>
 
-    <form id="formulario" action="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzZTA0MzI1MjZjNTUzZDUxMzUi_pc" method="POST" onsubmit="setTimeout(() => window.location.href='obrigado.html', 500);">
-      <h2>📬 Insira seus dados e receba o pack:</h2>
+    <div class="pack-details">
+      <h3>✅ O que você vai receber GRATUITAMENTE:</h3>
+      <ul>
+        <li>25 Prompts Visuais adaptados para Midjourney, Leonardo IA, Ideogram, Runway, VisualElectric, Hailuo</li>
+        <li>10 Prompts para Produtividade e Automação com ChatGPT</li>
+        <li>Mini Guia: Fundamentos da Engenharia de Prompt (2 páginas)</li>
+        <ul style="list-style: none; margin-top: 0.5rem; padding-left: 1rem;">
+          <li>→ O que é prompt engineering</li>
+          <li>→ Estrutura ideal para prompts</li>
+          <li>→ Exemplo funcional com explicação</li>
+        </ul>
+        <li>🎁 Bônus Exclusivo: Prompt premium para Jerry.ai</li>
+        <li>🎯 Acesso ao Grupo VIP no WhatsApp para dúvidas em tempo real</li>
+      </ul>
+    </div>
+
+    <form action="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzZTA0MzI1MjZjNTUzZDUxMzUi_pc" method="POST" onsubmit="setTimeout(() => window.location.href='obrigado.html', 500);">
+      <h2>📬 Insira seus dados e receba agora seu pack + acesso ao grupo VIP:</h2>
 
       <label for="name">Nome</label>
       <input type="text" id="name" name="name" required/>
@@ -158,23 +188,24 @@
       <label for="email">E-mail</label>
       <input type="email" id="email" name="email" required/>
 
-      <label for="whatsapp">WhatsApp</label>
-      <input type="tel" id="whatsapp" name="whatsapp" placeholder="+55" required/>
+      <label for="whatsapp">WhatsApp (apenas números)</label>
+      <input type="tel" id="whatsapp" name="whatsapp" placeholder="+55" value="+55" required/>
 
       <button type="submit" class="submit-btn">⚡ Receber Meus Prompts + Acesso VIP ao Grupo</button>
 
-      <p style="font-size: 0.9rem; margin-top: 1rem;">
-        🔒 Seus dados estão seguros. Não compartilhamos suas informações.<br>
+      <div class="cta-highlight">
+        🔒 Seus dados estão seguros. Não compartilhamos suas informações.<br />
         ⚡ Leva menos de 30 segundos e o acesso é imediato.
-      </p>
+      </div>
     </form>
 
-   <footer>
-  <a href="privacidade.html" target="_blank" style="color:#00d1ff;">Política de Privacidade</a> |
-  Desenvolvido com <strong style="color:#ffffff;">Jerry.IA</strong> por <strong style="color:#ffffff;">André Luiz</strong>
-</footer>
+    <footer>
+      <a href="privacidade.html">Política de Privacidade</a> | Desenvolvido com <strong>Jerry.IA</strong>
+    </footer>
   </div>
+
 </body>
 </html>
+
 
 
