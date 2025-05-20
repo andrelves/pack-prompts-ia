@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pack de Prompts IA – Economize Tempo</title>
+  <title>Pack de Prompts IA – Turbine Seu Dia</title>
   <style>
     body {
       background-image: url('https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/background.jpg');
@@ -21,7 +21,7 @@
       text-align: center;
     }
     .hero-section {
-      background: linear-gradient(to bottom, rgba(14, 15, 23, 0.7), rgba(14, 15, 23, 0.9)), url('https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/hero-woman.jpg');
+      background: linear-gradient(to bottom, rgba(14, 15, 23, 0.8), rgba(14, 15, 23, 0.95)), url('https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/hero-woman.jpg');
       background-size: cover;
       background-position: center;
       padding: 6rem 2rem 4rem;
@@ -31,11 +31,18 @@
       font-size: 2.8rem;
       color: #00d1ff;
     }
-    h2 {
+    h2, h3 {
       font-size: 1.3rem;
       color: #ccc;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
+    ul {
+      text-align: left;
+      margin-top: 1rem;
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+    .hero-img { display: none; }
     .benefits-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
@@ -50,7 +57,7 @@
     }
     .benefit img {
       width: 100%;
-      height: 260px;
+      height: 250px;
       object-fit: cover;
       border-radius: 8px;
       margin-bottom: 0.5rem;
@@ -84,40 +91,16 @@
       margin-top: 1.5rem;
       cursor: pointer;
     }
-    .cta-btn {
-      background: #00d1ff;
-      color: #0e0f17;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.2rem;
-      cursor: pointer;
+    .highlight {
+      color: #FFD700;
+      font-weight: bold;
       margin-top: 1rem;
-    }
-    .cta-btn:hover, .submit-btn:hover {
-      background: #00bde0;
-    }
-    .checklist {
-      text-align: left;
-      color: #ccc;
-      margin-top: 1rem;
-      font-size: 0.9rem;
-    }
-    .checklist span {
-      display: block;
-      margin-top: 0.4rem;
     }
     footer {
       text-align: center;
       margin: 3rem 0;
       color: #555;
-    }
-    footer a {
-      color: #888;
-      text-decoration: none;
-    }
-    footer a:hover {
-      color: #fff;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -125,13 +108,28 @@
   <div class="hero-section">
     <div class="container">
       <h1>Economize +3 Horas Por Dia com Prompts de IA Testados</h1>
-      <h2>35 comandos prontos para automatizar tarefas e elevar sua criatividade — mesmo sem experiência em IA</h2>
-      <p style="color: #FFD700; font-weight: bold;">Pack gratuito por tempo limitado!</p>
-      <button class="cta-btn" onclick="document.getElementById('formulario').scrollIntoView({behavior: 'smooth'})">⚡ Receber o meu Pack Agora</button>
+      <h2>25 comandos prontos para automatizar tarefas e elevar sua criatividade — mesmo sem experiência em IA</h2>
+      <p class="highlight">Pack gratuito por tempo limitado (avaliado em R$ 97)</p>
+      <button class="submit-btn" onclick="document.getElementById('formulario').scrollIntoView({ behavior: 'smooth' });">⚡ Receber o meu Pack Agora</button>
     </div>
   </div>
 
   <div class="container">
+    <h3>✅ O que você vai receber GRATUITAMENTE:</h3>
+    <ul>
+      <li>✅ 25 Prompts Visuais para IA (adaptado para: Midjourney, Leonardo IA, Ideogram, Runway, VisualElectric, Hailuo)</li>
+      <li>✅ 10 Prompts para Produtividade e Automação com ChatGPT</li>
+      <li>✅ Mini Guia: Fundamentos da Engenharia de Prompt (2 páginas)
+        <ul>
+          <li>→ O que é prompt engineering</li>
+          <li>→ Estrutura ideal para prompts</li>
+          <li>→ Exemplo funcional com explicação</li>
+        </ul>
+      </li>
+      <li>🎁 Bônus Exclusivo: Prompt premium em markdown ideal para Jerry.ai e Prompt Engineering avançado</li>
+      <li>🎯 Acesso ao Grupo VIP no WhatsApp para dúvidas em tempo real</li>
+    </ul>
+
     <div class="benefits-grid">
       <div class="benefit">
         <img src="https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/criacao-imagem.jpg" alt="Criação com IA"/>
@@ -152,12 +150,12 @@
     </div>
 
     <form id="formulario" action="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzZTA0MzI1MjZjNTUzZDUxMzUi_pc" method="POST" onsubmit="setTimeout(() => window.location.href='obrigado.html', 500);">
-      <h2>📬 Insira seus dados e receba os Prompts + acesso VIP ao Grupo:</h2>
+      <h2>📬 Insira seus dados e receba o pack:</h2>
 
       <label for="name">Nome</label>
       <input type="text" id="name" name="name" required/>
 
-      <label for="email">Seu melhor e-mail</label>
+      <label for="email">E-mail</label>
       <input type="email" id="email" name="email" required/>
 
       <label for="whatsapp">WhatsApp</label>
@@ -165,14 +163,14 @@
 
       <button type="submit" class="submit-btn">⚡ Receber Meus Prompts + Acesso VIP ao Grupo</button>
 
-      <div class="checklist">
-        <span>🔒 Seus dados estão seguros. Não compartilhamos suas informações.</span>
-        <span>⚡ Leva menos de 30 segundos e o acesso é imediato.</span>
-      </div>
+      <p style="font-size: 0.9rem; margin-top: 1rem;">
+        🔒 Seus dados estão seguros. Não compartilhamos suas informações.<br>
+        ⚡ Leva menos de 30 segundos e o acesso é imediato.
+      </p>
     </form>
 
     <footer>
-      <p><a href="privacidade.html" target="_blank">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+      <a href="privacidade.html" target="_blank" style="color:#00d1ff;">Política de Privacidade</a> | Desenvolvido com IA ⚙️
     </footer>
   </div>
 </body>
