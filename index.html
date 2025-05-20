@@ -10,6 +10,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      background-attachment: fixed;
       color: #eee;
       font-family: "Poppins", sans-serif;
       margin: 0;
@@ -55,6 +56,34 @@
       border-radius: 8px;
       margin-bottom: 0.5rem;
     }
+    .how-it-works {
+      margin: 2rem 0;
+    }
+    .how-it-works h3 {
+      color: #00d1ff;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .step {
+      max-width: 200px;
+      background: #1a1c29;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+    .step span {
+      font-size: 2rem;
+    }
+    .step p {
+      margin-top: 0.5rem;
+      color: #ccc;
+    }
     form {
       background: #1a1c29;
       padding: 2rem;
@@ -94,19 +123,42 @@
       cursor: pointer;
       margin-top: 1rem;
     }
-    footer { text-align: center; margin: 3rem 0; color: #555; }
+    .tail-cta {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .tail-cta p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+    footer {
+      text-align: center;
+      margin: 3rem 0;
+      color: #555;
+    }
   </style>
 </head>
 <body>
   <div class="hero-section">
     <div class="container">
       <h1>Descubra os Prompts de IA Que Economizam Horas do Seu Dia</h1>
-      <h2>Receba gratuitamente um pack com os prompts mais eficazes para criar imagens incríveis, automatizar tarefas e turbinar sua produtividade.</h2>
+      <h2>O primeiro passo para dominar IA no seu dia — sem complicação</h2>
+      <p style="color:#ffcc00; margin-top:0.5rem;">Pack gratuito por tempo limitado!</p>
       <button class="cta-btn" onclick="document.getElementById('formulario-pack').scrollIntoView({ behavior: 'smooth' });">🔽 Quero o Pack Gratuito</button>
     </div>
   </div>
 
   <div class="container">
+    <section class="how-it-works">
+      <h3>Veja como é simples:</h3>
+      <div class="steps">
+        <div class="step"><span>1️⃣</span><p>Insira nome, e-mail e WhatsApp</p></div>
+        <div class="step"><span>2️⃣</span><p>Receba o Pack automaticamente no WhatsApp</p></div>
+        <div class="step"><span>3️⃣</span><p>Comece a aplicar os prompts hoje mesmo</p></div>
+      </div>
+    </section>
+
     <div class="benefits-grid">
       <div class="benefit">
         <img src="https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/criacao-imagem.png" alt="Criação com IA"/>
@@ -141,7 +193,14 @@
       <button type="submit" class="submit-btn">⚡ Receber o meu Pack Agora</button>
     </form>
 
-    <footer>Política de Privacidade | Termos de Uso</footer>
+    <div class="tail-cta">
+      <p>Quer acesso imediato ao Pack e começar hoje mesmo?</p>
+      <button class="submit-btn" onclick="document.getElementById('formulario-pack').scrollIntoView({ behavior: 'smooth' });">⚡ Receber o meu Pack Agora</button>
+    </div>
+
+    <footer>
+      <a href="privacidade.html" style="color:#ccc; text-decoration:none;">Política de Privacidade</a> | Termos de Uso
+    </footer>
   </div>
 
   <script>
