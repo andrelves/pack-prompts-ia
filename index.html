@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pack de Prompts IA – Turbine Seu Dia</title>
+  <title>Pack de Prompts IA – Economize Tempo</title>
   <style>
     body {
       background-image: url('https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/background.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      background-attachment: fixed;
       color: #eee;
       font-family: "Poppins", sans-serif;
       margin: 0;
@@ -22,29 +21,24 @@
       text-align: center;
     }
     .hero-section {
-      background: linear-gradient(to bottom, rgba(14, 15, 23, 0.8), rgba(14, 15, 23, 0.95)), url('https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/hero-woman.jpg');
+      background: linear-gradient(to bottom, rgba(14, 15, 23, 0.7), rgba(14, 15, 23, 0.9)), url('https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/hero-woman.jpg');
       background-size: cover;
       background-position: center;
       padding: 6rem 2rem 4rem;
       border-radius: 12px;
     }
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       color: #00d1ff;
     }
     h2 {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       color: #ccc;
-      margin: 1rem 0;
-    }
-    .urgency {
-      color: gold;
-      font-weight: bold;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
     .benefits-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
       gap: 1.5rem;
       margin: 2rem 0;
     }
@@ -56,7 +50,7 @@
     }
     .benefit img {
       width: 100%;
-      height: 230px;
+      height: 260px;
       object-fit: cover;
       border-radius: 8px;
       margin-bottom: 0.5rem;
@@ -100,17 +94,30 @@
       cursor: pointer;
       margin-top: 1rem;
     }
-    .tail-cta {
-      margin-top: 3rem;
+    .cta-btn:hover, .submit-btn:hover {
+      background: #00bde0;
     }
-    .tail-cta h2 {
-      margin-bottom: 1rem;
+    .checklist {
+      text-align: left;
+      color: #ccc;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    .checklist span {
+      display: block;
+      margin-top: 0.4rem;
     }
     footer {
       text-align: center;
       margin: 3rem 0;
       color: #555;
-      font-size: 0.9rem;
+    }
+    footer a {
+      color: #888;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #fff;
     }
   </style>
 </head>
@@ -119,7 +126,7 @@
     <div class="container">
       <h1>Economize +3 Horas Por Dia com Prompts de IA Testados</h1>
       <h2>25 comandos prontos para automatizar tarefas e elevar sua criatividade — mesmo sem experiência em IA</h2>
-      <p class="urgency">Pack gratuito por tempo limitado!</p>
+      <p style="color: #FFD700; font-weight: bold;">Pack gratuito por tempo limitado!</p>
       <button class="cta-btn" onclick="document.getElementById('formulario').scrollIntoView({behavior: 'smooth'})">⚡ Receber o meu Pack Agora</button>
     </div>
   </div>
@@ -145,30 +152,30 @@
     </div>
 
     <form id="formulario" action="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzZTA0MzI1MjZjNTUzZDUxMzUi_pc" method="POST" onsubmit="setTimeout(() => window.location.href='obrigado.html', 500);">
-      <h2>📬 Insira seus dados e receba o pack + entre no grupo VIP para tirar dúvidas em tempo real:</h2>
+      <h2>📬 Insira seus dados e receba os Prompts + acesso VIP ao Grupo:</h2>
+
       <label for="name">Nome</label>
       <input type="text" id="name" name="name" required/>
 
-      <label for="email">E-mail</label>
+      <label for="email">Seu melhor e-mail</label>
       <input type="email" id="email" name="email" required/>
 
       <label for="whatsapp">WhatsApp</label>
-      <input type="tel" id="whatsapp" name="whatsapp" placeholder="+55" value="+55" required/>
+      <input type="tel" id="whatsapp" name="whatsapp" placeholder="+55" required/>
 
       <button type="submit" class="submit-btn">⚡ Receber Meus Prompts + Acesso VIP ao Grupo</button>
-      <small style="color:#888; display:block; margin-top:0.5rem;">🔒 Seus dados estão seguros. Não compartilhamos suas informações.</small>
-      <small style="color:#888; display:block;">⚡ Leva menos de 30 segundos e o acesso é imediato.</small>
+
+      <div class="checklist">
+        <span>🔒 Seus dados estão seguros. Não compartilhamos suas informações.</span>
+        <span>⚡ Leva menos de 30 segundos e o acesso é imediato.</span>
+      </div>
     </form>
 
-    <div class="tail-cta">
-      <h2>Quer acesso imediato ao Pack e começar hoje mesmo?</h2>
-      <button class="cta-btn" onclick="document.getElementById('formulario').scrollIntoView({behavior: 'smooth'})">⚡ Receber o meu Pack Agora</button>
-    </div>
-
     <footer>
-      <a href="privacidade.html" style="color:#777;">Política de Privacidade</a> | <a href="#" style="color:#777;">Termos de Uso</a>
+      <p><a href="privacidade.html" target="_blank">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
     </footer>
   </div>
 </body>
 </html>
+
 
