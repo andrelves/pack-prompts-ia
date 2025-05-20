@@ -23,116 +23,80 @@
       }
     }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-      text-align: center;
-    }
+    .container { max-width: 1000px; margin: auto; padding: 2rem; text-align: center; }
     .hero-section {
-      background: linear-gradient(to bottom, rgba(14, 15, 23, 0.7), rgba(14, 15, 23, 0.9)), url('https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/imagem%20topo%20fundo%20atras%20do%20texto.png');
+      background: linear-gradient(to bottom, rgba(14,15,23,0.7), rgba(14,15,23,0.9)), url('https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/imagem%20topo%20fundo%20atras%20do%20texto.png');
       background-size: cover;
       background-position: right;
       padding: 6rem 2rem 4rem;
       border-radius: 12px;
     }
-    h1 {
-      font-size: 2.8rem;
-      color: #00d1ff;
+    h1 { font-size: 2.8rem; color: #00d1ff; }
+    h2 { font-size: 1.3rem; color: #ccc; margin-bottom: 1rem; }
+    .hero-section p { color: #ffcc00; margin-bottom: 2rem; font-weight: bold; }
+    .cta-btn, .submit-btn {
+      background: #00d1ff; color: #0e0f17; border: none; border-radius: 8px;
+      font-size: 1.1rem; cursor: pointer;
     }
-    h2 {
-      font-size: 1.3rem;
-      color: #ccc;
-      margin-bottom: 2rem;
-    }
+    .cta-btn { padding: 1rem 2rem; margin-top: 1rem; }
     .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap: 1.5rem; margin: 2rem 0;
     }
     .benefit {
-      background: #1a1c29;
-      padding: 1rem;
-      border-radius: 12px;
+      background: #1a1c29; padding: 1rem; border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
-    .benefit img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 0.5rem;
-    }
-    .how-it-works {
-      margin: 2rem 0;
-    }
-    .how-it-works h3 {
-      color: #00d1ff;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
+    .benefit img { width: 100%; border-radius: 8px; margin-bottom: 0.5rem; }
+    .how-it-works { margin: 2rem 0; }
+    .how-it-works h3 { color: #00d1ff; font-size: 1.8rem; margin-bottom: 1rem; }
     .steps {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;
     }
     .step {
-      max-width: 200px;
-      background: #1a1c29;
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      max-width: 200px; background: #1a1c29; padding: 1rem;
+      border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
-    .step span {
-      font-size: 2rem;
+    .step span { font-size: 2rem; }
+    .step p { margin-top: 0.5rem; color: #ccc; }
+    .what-you-get {
+      margin: 2rem 0; text-align: left;
     }
-    .step p {
-      margin-top: 0.5rem;
-      color: #ccc;
+    .what-you-get h3 { color: #00d1ff; font-size: 1.8rem; margin-bottom: 1rem; text-align: center; }
+    .what-you-get ul {
+      list-style: none; padding-left: 0; max-width: 600px; margin: auto;
+      color: #ccc; line-height: 1.6;
+    }
+    .what-you-get li {
+      position: relative; padding-left: 1.5rem; margin-bottom: 0.75rem;
+    }
+    .what-you-get li::before {
+      content: "✔"; position: absolute; left: 0; color: #00d1ff;
     }
     form {
-      background: #1a1c29;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-      text-align: left;
-      margin-top: 2rem;
+      background: #1a1c29; padding: 2rem; border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5); text-align: left; margin: 2rem 0;
     }
-    label { color: #aaa; margin-top:1rem; display:block; }
+    label { color: #aaa; margin-top: 1rem; display: block; }
     input {
-      width:100%;
-      padding: .8rem;
-      margin-top: .3rem;
-      border-radius: 6px;
-      border: none;
-      background: #333;
-      color: #eee;
+      width: 100%; padding: .8rem; margin-top: .3rem;
+      border-radius: 6px; border: none; background: #333; color: #eee;
     }
-    .submit-btn {
-      background: #00d1ff;
-      color: #0e0f17;
-      padding: 1rem;
-      border: none;
-      border-radius: 8px;
-      width: 100%;
-      font-size: 1.1rem;
-      margin-top: 1.5rem;
-      cursor: pointer;
+    .privacy-note {
+      font-size: 0.9rem; color: #aaa; margin-top: 0.5rem; text-align: center;
     }
     footer {
-      text-align: center;
-      margin: 3rem 0;
-      color: #555;
+      text-align: center; margin: 3rem 0; color: #555;
     }
   </style>
 </head>
 <body>
   <div class="hero-section">
     <div class="container">
-      <h1>Descubra os Prompts de IA Que Economizam Horas do Seu Dia</h1>
-      <h2>O primeiro passo para dominar IA no seu dia — sem complicação</h2>
-      <p style="color:#ffcc00; margin-top:0.5rem;">Pack gratuito por tempo limitado!</p>
-      <button class="submit-btn" onclick="document.getElementById('formulario-pack').scrollIntoView({ behavior: 'smooth' });">⚡ Receber o meu Pack Agora</button>
+      <h1>Economize +3 Horas Por Dia com Prompts de IA Testados</h1>
+      <h2>25 comandos prontos para automatizar tarefas e elevar sua criatividade — mesmo sem experiência em IA</h2>
+      <p>Pack gratuito por tempo limitado!</p>
+      <button class="cta-btn" onclick="document.getElementById('formulario-pack').scrollIntoView({ behavior:'smooth' });">⚡ Receber o meu Pack Agora</button>
     </div>
   </div>
 
@@ -141,62 +105,69 @@
       <h3>Veja como é simples:</h3>
       <div class="steps">
         <div class="step"><span>1️⃣</span><p>Insira nome, e-mail e WhatsApp</p></div>
-        <div class="step"><span>2️⃣</span><p>Receba o Pack automaticamente no WhatsApp</p></div>
-        <div class="step"><span>3️⃣</span><p>Comece a aplicar os prompts hoje mesmo</p></div>
+        <div class="step"><span>2️⃣</span><p>Receba o Pack no WhatsApp + Grupo VIP</p></div>
+        <div class="step"><span>3️⃣</span><p>Use os prompts e veja resultados imediatos</p></div>
       </div>
+    </section>
+
+    <section class="what-you-get">
+      <h3>O que você vai receber:</h3>
+      <ul>
+        <li>25 Prompts de Imagem para Midjourney, Leonardo IA e Ideogram</li>
+        <li>10 Prompts de Produtividade com ChatGPT</li>
+        <li>Mini-guia de Engenharia de Prompt (2 páginas)</li>
+        <li>Bônus surpresa: um prompt premium exclusivo</li>
+        <li>Acesso ao Grupo VIP no WhatsApp para tirar dúvidas em tempo real</li>
+      </ul>
     </section>
 
     <div class="benefits-grid">
       <div class="benefit">
-        <img src="https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/criacao-imagem.png" alt="Criação com IA"/>
+        <img src=".../criacao-imagem.png" alt="Criação com IA"/>
         <p>Prompts criativos para gerar imagens incríveis com IA.</p>
       </div>
       <div class="benefit">
-        <img src="https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/organizacao-tarefas.png" alt="Organização de Tarefas"/>
+        <img src=".../organizacao-tarefas.png" alt="Organização"/>
         <p>Automatize sua rotina com prompts de produtividade.</p>
       </div>
       <div class="benefit">
-        <img src="https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/fotografia-antiga.png" alt="Estilo Fotográfico"/>
-        <p>Crie imagens em estilos fotográficos únicos com IA.</p>
+        <img src=".../fotografia-antiga.png" alt="Estilo Fotográfico"/>
+        <p>Crie imagens em estilos únicos com IA.</p>
       </div>
       <div class="benefit">
-        <img src="https://raw.githubusercontent.com/andrelves/pack-prompts-ia/refs/heads/main/robo-prompt.png" alt="Robô criando Prompt"/>
-        <p>Explore o poder dos prompts avançados com IA personalizada.</p>
+        <img src=".../robo-prompt.png" alt="Robô Prompt"/>
+        <p>Explore prompts avançados para resultados mais precisos.</p>
       </div>
     </div>
 
-    <form id="formulario-pack" action="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzZTA0MzI1MjZjNTUzZDUxMzUi_pc" method="POST" onsubmit="if (!validateForm()) return false; setTimeout(() => window.location.href='obrigado.html', 500);">
-      <h2>📬 Insira seus dados e receba o pack + entre no grupo exclusivo do WhatsApp:</h2>
-
+    <form id="formulario-pack" action="https://connect.pabbly.com/..." method="POST"
+      onsubmit="if(!validateForm())return false;setTimeout(()=>window.location.href='obrigado.html',500);">
+      <h2>📬 Cadastre-se para receber o Pack + acessar Grupo VIP</h2>
       <label for="name">Nome</label>
       <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required/>
-
       <label for="email">Seu melhor e-mail</label>
-      <input type="email" id="email" name="email" placeholder="exemplo@email.com" required/>
-
+      <input type="email" id="email" name="email" placeholder="seu@email.com" required/>
       <label for="whatsapp">WhatsApp</label>
-      <input type="tel" id="whatsapp" name="whatsapp" placeholder="(DDD) + número" required value="+55"/>
-
+      <input type="tel" id="whatsapp" name="whatsapp" placeholder="+55 (DDD) número" value="+55" required/>
       <button type="submit" class="submit-btn">⚡ Receber o meu Pack Agora</button>
+      <p class="privacy-note">Seus dados estão seguros e não serão compartilhados.</p>
     </form>
 
     <footer>
-      <a href="privacidade.html" style="color:#ccc; text-decoration:none;">Política de Privacidade</a> | Termos de Uso
+      <a href="privacidade.html" style="color:#ccc;text-decoration:none;">Política de Privacidade</a> | Termos de Uso
     </footer>
   </div>
 
   <script>
-    function validateForm() {
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const whatsapp = document.getElementById("whatsapp").value.trim();
-      if (!name || !email || whatsapp.length <= 3) {
-        alert("Por favor, preencha todos os campos corretamente.");
-        return false;
-      }
+    function validateForm(){
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const whatsapp = document.getElementById('whatsapp').value.trim();
+      if(!name||!email||whatsapp.length<=3){ alert('Por favor, preencha todos os campos.'); return false; }
       return true;
     }
   </script>
 </body>
 </html>
+
 
