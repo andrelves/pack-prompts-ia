@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pack de Prompts IA – Turbine Seu Dia</title>
+  <style>
+    body { background: #0e0f17; color: #eee; font-family: "Poppins", sans-serif; margin: 0; }
+    .container { max-width: 1000px; margin: auto; padding: 2rem; text-align: center; }
+    h1 { font-size: 2.8rem; color: #00d1ff; }
+    h2 { font-size: 1.3rem; color: #ccc; margin-bottom: 2rem; }
+    .hero-img { width: 100%; border-radius: 12px; margin-bottom: 2rem; }
+    .benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:1.5rem; margin: 2rem 0; }
+    .benefit { background: #1a1c29; padding:1.5rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+    .benefit span { font-size: 2rem; display: block; margin-bottom: .5rem; }
+    .carousel { margin: 3rem 0; font-style: italic; color: #ccc; overflow: hidden; height: 2.5rem; position: relative; }
+    .carousel-text { position: absolute; width: 100%; animation: slide 12s infinite; }
+    @keyframes slide {
+      0% { top: 0; }
+      33% { top: -2.5rem; }
+      66% { top: -5rem; }
+      100% { top: 0; }
+    }
+    .quote-line { height: 2.5rem; display: flex; align-items: center; justify-content: center; }
+    .offer { background: #1a1c29; padding: 2rem; border-radius: 12px; margin-top: 2rem; box-shadow: 0 0 10px rgba(0,0,0,0.3); text-align: left; }
+    .offer h3 { color: #00d1ff; margin-bottom: 1rem; }
+    .offer ul { list-style: none; padding-left: 0; }
+    .offer li { margin: 0.5rem 0; padding-left: 1rem; position: relative; }
+    .offer li::before { content: "✔"; position: absolute; left: 0; color: #00d1ff; }
+    form { background: #1a1c29; padding: 2rem; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.5); text-align: left; margin-top: 2rem; }
+    label { color: #aaa; margin-top:1rem; display:block; }
+    input { width:100%; padding:.8rem; margin-top:.3rem; border-radius:6px; border:none; background:#333; color:#eee; }
+    .submit-btn { background: #00d1ff; color: #0e0f17; padding:1rem; border:none; border-radius:8px; width:100%; font-size:1.1rem; margin-top:1.5rem; cursor:pointer; }
+    .cta-btn { background: #00d1ff; color: #0e0f17; padding:1rem 2rem; border:none; border-radius:8px; font-size:1.2rem; cursor:pointer; margin-top:1rem; }
+    footer { text-align: center; margin:3rem 0; color: #555; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://images.unsplash.com/photo-hero-ai-woman" alt="AI-generated hero" class="hero-img"/>
+    <h1>Descubra os Prompts de IA Que Economizam Horas do Seu Dia</h1>
+    <h2>Receba gratuitamente um pack com os prompts mais eficazes para criar imagens incríveis, automatizar tarefas e turbinar sua produtividade.</h2>
+    <button class="cta-btn">🔽 Quero o Pack Gratuito</button>
+
+    <div class="benefits">
+      <div class="benefit"><span>🧠</span><strong>Melhore seus Prompts</strong><p>Comandos prontos que funcionam com precisão no ChatGPT.</p></div>
+      <div class="benefit"><span>🎨</span><strong>Crie Imagens Incríveis</strong><p>Templates para Midjourney, Leonardo IA e outras.</p></div>
+      <div class="benefit"><span>⚙️</span><strong>Automatize Tarefas</strong><p>Resumos, ideias, textos e processos otimizados com IA.</p></div>
+      <div class="benefit"><span>🤖</span><strong>Testado com Agente IA</strong><p>Prompts estruturados para performance máxima.</p></div>
+    </div>
+
+    <div class="carousel">
+      <div class="carousel-text">
+        <div class="quote-line">“Dominar prompts é dominar o futuro da produtividade.”</div>
+        <div class="quote-line">“Quem usa IA com estratégia está sempre 10 passos à frente.”</div>
+        <div class="quote-line">“Prompts bem estruturados valem mais do que mil cliques.”</div>
+      </div>
+    </div>
+
+    <div class="offer">
+      <h3>🎁 O Que Você Vai Receber:</h3>
+      <ul>
+        <li>10 Prompts Profissionais para imagens com IA</li>
+        <li>5 Estruturas prontas para ChatGPT com foco em produtividade, atendimento e vendas</li>
+        <li>Mini-guia: como estruturar prompts para alta performance</li>
+      </ul>
+    </div>
+
+    <form>
+      <h2>📬 Insira seus dados e receba o pack + entre no grupo exclusivo do WhatsApp:</h2>
+      <label for="name">Nome</label><input type="text" id="name" name="name" required/>
+      <label for="email">E-mail</label><input type="email" id="email" name="email" required/>
+      <label for="whatsapp">WhatsApp (apenas números)</label><input type="tel" id="whatsapp" name="whatsapp" placeholder="5511999999999" required/>
+      <button type="submit" class="submit-btn">📥 Enviar Pack + Entrar no WhatsApp</button>
+    </form>
+
+    <footer>Política de Privacidade | Termos de Uso</footer>
+  </div>
+</body>
+</html>
