@@ -5,6 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pack de Prompts IA – Turbine Seu Dia</title>
   <style>
+<script>
+  const form = document.getElementById("prompt-form");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const data = {
+      nome: formData.get("nome"),
+      email: formData.get("email"),
+      telefone: formData.get("telefone")
+    };
+
+    await fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzZTA0MzI1MjZjNTUzZDUxMzUi_pc", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    window.location.href = "obrigado.html";
+  });
+</script>
+
     body {
       background-color: #0e0f17;
       color: #eee;
@@ -205,25 +228,25 @@
       </ul>
     </div>
 
-    <form action="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzZTA0MzI1MjZjNTUzZDUxMzUi_pc" method="POST" onsubmit="setTimeout(() => window.location.href='obrigado.html', 500);">
-      <h2>📬 Insira seus dados para receber seu pack agora:</h2>
+   <form id="prompt-form">
+  <h2>📬 Insira seus dados para receber seu pack agora:</h2>
 
-      <label for="name">Nome</label>
-      <input type="text" id="name" name="name" required/>
+  <label for="nome">Nome</label>
+  <input type="text" id="nome" name="nome" required/>
 
-      <label for="email">E-mail</label>
-      <input type="email" id="email" name="email" required/>
+  <label for="email">E-mail</label>
+  <input type="email" id="email" name="email" required/>
 
-      <label for="whatsapp">WhatsApp (apenas números)</label>
-      <input type="tel" id="whatsapp" name="whatsapp" placeholder="+55" value="+55" required/>
+  <label for="telefone">WhatsApp (apenas números)</label>
+  <input type="tel" id="telefone" name="telefone" placeholder="+55" value="+55" required/>
 
-      <button type="submit" class="submit-btn">⚡ Receber Meus Prompts + Acesso VIP ao Grupo</button>
+  <button type="submit" class="submit-btn">⚡ Receber Meus Prompts + Acesso VIP ao Grupo</button>
 
-      <div class="form-info">
-        🔒 Seus dados estão seguros. Não compartilhamos suas informações.<br />
-        ⚡ Leva menos de 30 segundos e o acesso é imediato.
-      </div>
-    </form>
+  <div class="form-info">
+    🔒 Seus dados estão seguros. Não compartilhamos suas informações.<br />
+    ⚡ Leva menos de 30 segundos e o acesso é imediato.
+  </div>
+</form>
 
    <footer>
   <a href="privacidade.html" target="_blank" style="color:#00d1ff;">Política de Privacidade</a> |
