@@ -5,29 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pack de Prompts IA – Turbine Seu Dia</title>
   <style>
-<script>
-  const form = document.getElementById("prompt-form");
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    const data = {
-      nome: formData.get("nome"),
-      email: formData.get("email"),
-      telefone: formData.get("telefone")
-    };
-
-    await fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzZTA0MzI1MjZjNTUzZDUxMzUi_pc", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
-    });
-
-    window.location.href = "obrigado.html";
-  });
-</script>
-
     body {
       background-color: #0e0f17;
       color: #eee;
@@ -248,13 +225,33 @@
   </div>
 </form>
 
+
    <footer>
   <a href="privacidade.html" target="_blank" style="color:#00d1ff;">Política de Privacidade</a> |
   Desenvolvido com <strong style="color:#ffffff;">Jerry.IA</strong> por <strong style="color:#ffffff;">André Luiz</strong>
 </footer>
+<script>
+  const form = document.getElementById("prompt-form");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const data = {
+      nome: formData.get("nome"),
+      email: formData.get("email"),
+      telefone: formData.get("telefone")
+    };
+
+    await fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzZTA0MzI1MjZjNTUzZDUxMzUi_pc", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    window.location.href = "obrigado.html";
+  });
+</script>
 
 </body>
 </html>
-
-
-
