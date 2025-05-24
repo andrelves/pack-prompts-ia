@@ -29,10 +29,11 @@
 </head>
 <body>
   <h1>🎉 Download Liberado!</h1>
-  <p>Você já pode baixar seus arquivos:</p>
+  <p>Seus arquivos foram enviados para o seu WhatsApp com sucesso!</p>
 
   <a href="https://drive.google.com/uc?export=download&id=1qFnhPt7IXXGfoBQR5QE3IgZM2UnYKDBZ" class="button" target="_blank">📘 Baixar Ebook Pack Prompts</a><br>
-  <a href="https://drive.google.com/uc?export=download&id=1Ar5TuExMr9Ua8WYjCDY4hV26TPS-6xyg" class="button" target="_blank">📗 Baixar Mini Guia</a>
+  <a href="https://drive.google.com/uc?export=download&id=1Ar5TuExMr9Ua8WYjCDY4hV26TPS-6xyg" class="button" target="_blank">📗 Baixar Mini Guia</a><br>
+  <a href="https://www.instagram.com/andrelves.3/" class="button" target="_blank">📲 Me siga no Instagram</a>
 
   <footer>Projeto IA na Prática © 2025 – com propósito</footer>
 </body>
