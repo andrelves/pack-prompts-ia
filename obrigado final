@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acesso Liberado – Pack Completo</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #0e0f17, #1a1c29);
+      color: #eee;
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      padding: 4rem 2rem;
+      margin: 0;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #00ff9d;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      color: #ccc;
+      max-width: 600px;
+      margin: 1rem auto 2rem;
+    }
+    .button {
+      background: #00d1ff;
+      color: #0e0f17;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      display: inline-block;
+      margin: 1rem;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background: #00b4d4;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉 Acesso Liberado!</h1>
+  <p>Você entrou no nosso Grupo VIP e agora tem acesso ao Pack completo de Prompts + Mini Guia de Engenharia de Prompts.</p>
+
+  <a href="ebooks/pack-prompts.pdf" class="button" download>📥 Baixar Pack de Prompts</a>
+  <a href="ebooks/mini-guia-prompts.pdf" class="button" download>📘 Baixar Mini Guia Complementar</a>
+
+  <p style="color:#aaa; font-size: 0.95rem;">Fique atento ao grupo VIP para mais conteúdos, atualizações e aulas exclusivas.</p>
+
+  <footer>Projeto IA na Prática © 2025 – com propósito</footer>
+
+</body>
+</html>
