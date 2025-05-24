@@ -230,6 +230,7 @@
   <a href="privacidade.html" target="_blank" style="color:#00d1ff;">Política de Privacidade</a> |
   Desenvolvido com <strong style="color:#ffffff;">Jerry.IA</strong> por <strong style="color:#ffffff;">André Luiz</strong>
 </footer>
+<!-- ADICIONADO AO FINAL DO SCRIPT -->
 <script>
   const form = document.getElementById("prompt-form");
 
@@ -243,6 +244,10 @@
       telefone: formData.get("telefone")
     };
 
+    // Salva nome e telefone no localStorage
+    localStorage.setItem("nome", data.nome);
+    localStorage.setItem("telefone", data.telefone);
+
     await fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzZTA0MzI1MjZjNTUzZDUxMzUi_pc", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -252,6 +257,7 @@
     window.location.href = "obrigado.html";
   });
 </script>
+
 
 </body>
 </html>
