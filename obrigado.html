@@ -33,7 +33,7 @@
       overflow: hidden;
     }
     .progress-bar {
-      width: 50%;
+      width: 75%;
       height: 100%;
       background: #00d1ff;
     }
@@ -48,13 +48,10 @@
       transition: background 0.3s;
       display: inline-block;
       margin-bottom: 1.5rem;
+      cursor: pointer;
     }
     .button:hover {
       background: #00b4d4;
-    }
-    #download-section {
-      display: none;
-      margin-top: 2rem;
     }
     footer {
       margin-top: 3rem;
@@ -67,31 +64,36 @@
 
   <h1>🚀 Falta só 1 passo!</h1>
   <div class="progress"><div class="progress-bar"></div></div>
-  <h2>Você está a 50% do seu <strong>Pack de Prompts + Mini Guia</strong>.<br>Para liberar o download, entre no grupo VIP:</h2>
+  <h2>Você está a 75% do seu <strong>Pack de Prompts + Mini Guia</strong>.<br>Para liberar o download, entre no grupo VIP:</h2>
 
-  <a href="https://chat.whatsapp.com/SEULINKDOGRUPO" class="button" onclick="window.location.href='obrigado-final.html';">Entrar no Grupo</a>
-
+  <a href="https://chat.whatsapp.com/HeRyoldZMZpGMsL80LA9R9" class="button" onclick="enviarZap()">Entrar no Grupo</a>
 
   <p style="color: #888; font-size: 0.95rem; max-width: 500px; margin: auto;">
-    Após entrar no grupo, o botão de download será liberado automaticamente.
+    Assim que você entrar, seu material será enviado automaticamente no WhatsApp!
   </p>
-
-  <div id="download-section">
-    <a href="ebooks/pack-prompts.pdf" download class="button">📥 Baixar Pack + Mini Guia</a>
-    <p style="font-size: 0.9rem; color: #aaa;">Se não baixar automaticamente, clique com botão direito e selecione "Salvar link como..."</p>
-  </div>
 
   <footer>Projeto IA na Prática © 2025 – feito com propósito</footer>
 
   <script>
-    function liberarDownload() {
-      setTimeout(() => {
-        document.getElementById('download-section').style.display = 'block';
-      }, 10000); // 10 segundos
+    function enviarZap() {
+      const nome = localStorage.getItem("nome");
+      const telefone = localStorage.getItem("telefone");
+
+      const url = new URL("https://SEU-REPLIT-URL/enviar"); // ← Substituir pelo seu Replit
+      url.searchParams.append("nome", nome);
+      url.searchParams.append("telefone", telefone);
+
+      fetch(url).then(() => {
+        setTimeout(() => {
+          window.location.href = "obrigadofinal.html";
+        }, 1000);
+      });
     }
   </script>
 
 </body>
+</html>
+
 </html>
 
 
