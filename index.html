@@ -248,11 +248,11 @@
     localStorage.setItem("nome", data.nome);
     localStorage.setItem("telefone", data.telefone);
 
-    await fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzZTA0MzI1MjZjNTUzZDUxMzUi_pc", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
-    });
+   await fetch("https://promptx.app.n8n.cloud/webhook-test/b4cddfe1-1a35-4221-bcc0-1707ae1f3214", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(data)
+});
 
     window.location.href = "obrigado.html";
   });
