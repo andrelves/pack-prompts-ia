@@ -75,22 +75,29 @@
 
   <footer>Projeto IA na Prática © 2025 – feito com propósito</footer>
 
-  <script>
-    function enviarZap() {
-      const nome = localStorage.getItem("nome");
-      const telefone = localStorage.getItem("telefone");
+ <script>
+  function liberarDownload() {
+    setTimeout(() => {
+      document.getElementById('download-section').style.display = 'block';
+    }, 10000);
+  }
 
-      const url = new URL("https://SEU-REPLIT-URL/enviar"); // ← Substituir pelo seu Replit
-      url.searchParams.append("nome", nome);
-      url.searchParams.append("telefone", telefone);
+  async function registrarEntrada() {
+    const telefone = localStorage.getItem("telefone");
+    const nome = localStorage.getItem("nome");
 
-      fetch(url).then(() => {
-        setTimeout(() => {
-          window.location.href = "obrigadofinal.html";
-        }, 1000);
-      });
-    }
-  </script>
+    await fetch("https://promptx.app.n8n.cloud/webhook/entrou-no-grupo", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ telefone, nome })
+    });
+
+    window.location.href = "https://chat.whatsapp.com/HeRyoldZMZpGMsL80LA9R9";
+  }
+</script>
+</body>
+</html>
+
 
 </body>
 </html>
