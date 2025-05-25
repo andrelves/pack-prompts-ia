@@ -230,7 +230,9 @@
   <a href="privacidade.html" target="_blank" style="color:#00d1ff;">Política de Privacidade</a> |
   Desenvolvido com <strong style="color:#ffffff;">Jerry.IA</strong> por <strong style="color:#ffffff;">André Luiz</strong>
 </footer>
-<!-- ADICIONADO AO FINAL DO SCRIPT -->
+
+
+
 <script>
   const form = document.getElementById("prompt-form");
 
@@ -238,26 +240,31 @@
     e.preventDefault();
 
     const formData = new FormData(form);
-    const data = {
-      nome: formData.get("nome"),
-      email: formData.get("email"),
-      telefone: formData.get("telefone")
-    };
+    const nome = formData.get("nome");
+    const email = formData.get("email");
+    const telefone = formData.get("telefone");
 
-    // Salva nome e telefone no localStorage
-    localStorage.setItem("nome", data.nome);
-    localStorage.setItem("telefone", data.telefone);
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const telefoneValido = /^\d{10,13}$/.test(telefone);
 
-   await fetch("https://promptx.app.n8n.cloud/webhook-test/b4cddfe1-1a35-4221-bcc0-1707ae1f3214", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify(data)
-});
+    if (!nome || !emailValido || !telefoneValido) {
+      alert("Por favor, preencha todos os campos corretamente:\n- Nome não pode estar vazio\n- E-mail precisa ser válido (ex: voce@email.com)\n- Telefone deve conter apenas números e ter entre 10 e 13 dígitos.");
+      return;
+    }
+
+    localStorage.setItem("nome", nome);
+    localStorage.setItem("email", email);
+    localStorage.setItem("telefone", telefone);
+
+    await fetch("https://promptx.app.n8n.cloud/webhook-test/b4cddfe1-1a35-4221-bcc0-1707ae1f3214", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ nome, email, telefone })
+    });
 
     window.location.href = "obrigado.html";
   });
 </script>
-
 
 </body>
 </html>
