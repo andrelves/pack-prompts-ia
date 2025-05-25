@@ -86,7 +86,7 @@
     const telefone = localStorage.getItem("telefone");
     const nome = localStorage.getItem("nome");
 
-    await fetch("https://promptx.app.n8n.cloud/webhook-test/entrou-no-grupo", {
+    await fetch("https://promptx.app.n8n.cloud/webhook/entrou-no-grupo", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ telefone, nome })
