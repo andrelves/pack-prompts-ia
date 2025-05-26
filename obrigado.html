@@ -85,8 +85,8 @@
   async function registrarEntrada() {
     const telefone = localStorage.getItem("telefone");
     const nome = localStorage.getItem("nome");
-console.log("Disparando webhook com:", telefone, nome);
-    await fetch("http://localhost:5678/webhook/entrou-no-grupo", {
+
+    await fetch("https://promptx.app.n8n.cloud/webhook/entrou-no-grupo", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ telefone, nome })
