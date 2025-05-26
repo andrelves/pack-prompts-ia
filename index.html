@@ -256,7 +256,7 @@
     localStorage.setItem("email", email);
     localStorage.setItem("telefone", telefone);
 
-    await fetch("https://promptx.app.n8n.cloud/webhook-test/Envio de dados", {
+    await fetch("https://promptx.app.n8n.cloud/webhook/Envio de dados", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nome, email, telefone })
