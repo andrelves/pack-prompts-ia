@@ -59,6 +59,31 @@
       color: #555;
     }
   </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version=\'2.0\';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,\'script\',
+\'https://connect.facebook.net/en_US/fbevents.js\');
+fbq(\'init\', \'1342269326849013\');
+fbq(\'track\', \'PageView\');
+</script>
+<noscript><img height=\
+
+
+1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1342269326849013&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<script>
+  fbq(\'track\', \'Lead\');
+</script>
+
 </head>
 <body>
 
@@ -78,13 +103,15 @@
  <script>
   function liberarDownload() {
     setTimeout(() => {
-      document.getElementById('download-section').style.display = 'block';
+      document.getElementById(\'download-section\').style.display = \'block\';
     }, 10000);
   }
 
   async function registrarEntrada() {
     const telefone = localStorage.getItem("telefone");
     const nome = localStorage.getItem("nome");
+
+    fbq(\'track\', \'Contact\'); // Evento de clique no botão do WhatsApp
 
     await fetch("https://promptx.app.n8n.cloud/webhook/entrou-no-grupo", {
       method: "POST",
@@ -97,11 +124,3 @@
 </script>
 </body>
 </html>
-
-
-</body>
-</html>
-
-</html>
-
-
